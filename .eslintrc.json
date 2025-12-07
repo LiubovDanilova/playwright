@@ -1,0 +1,61 @@
+{
+  "globals": {
+    "describe": true,
+    "it": true
+  },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true,
+    "jquery": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:playwright/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2017,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "playwright",
+    "prettier"
+  ],
+  "overrides": [
+    {
+      "files": "scripts/*",
+      "rules": {
+        "no-console": "off"
+      }
+    }
+  ],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "printWidth": 130,
+        "singleQuote": true,
+        "tabWidth": 4,
+        "endOfLine": "auto"
+      }
+    ],
+    "no-console": "warn",
+    "space-infix-ops": [
+      "error",
+      {
+        "int32Hint": false
+      }
+    ],
+    "playwright/no-nested-step": "off",
+    "camelcase": "error",
+    "no-debugger": "error",
+    "no-use-before-define": "error",
+    "@typescript-eslint/no-require-imports": "warn",
+    "@typescript-eslint/no-unused-expressions": "warn"
+  },
+  "root": true
+}
